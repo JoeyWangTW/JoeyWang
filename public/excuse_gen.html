@@ -1,0 +1,51 @@
+<html>
+<body>
+  <h1>Excuse Generator PRO</h1>
+    <h2 id="info">Put the thing you don't want to do here<br>( Please start with "I can't",
+      eg: I can't wash the dishes.)</h2><br>
+    <input id="excuse"></input>
+    <button class="button" onclick="go()">Generate !</button>
+</body>
+</html>
+<style>
+body{
+  margin-top:10%;
+  text-align:center;
+  background-image:url(https://imgur.com/yehmXEZ.gif)
+}
+h1,h2{
+  text-shadow: 2px 2px #ffffff;
+}
+#excuse {
+  width: 70%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+.button {
+  margin-top: 20px;
+  padding: 25px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 24px;
+  background-color: #000;
+  color: lime;
+  border-radius: 10px;
+  border-color: lime;
+  border-style: solid;
+  border-width: 3px;
+  cursor: crosshair;
+}
+</style>
+<script>
+    function go() {
+  var exc = document.getElementById("excuse").value;
+  console.log(exc);
+  document.getElementById("info").innerHTML="HERE YOU GO:<br>"+"<p>Due to the COVID-19, "+exc+"</p>";
+  document.getElementById("excuse").style.display = "none"; 
+}
+</script>
